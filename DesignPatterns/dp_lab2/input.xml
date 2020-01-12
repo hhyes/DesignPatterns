@@ -1,0 +1,18 @@
+<?xml version = "1.0"?>
+<book>
+   <element>
+      <class>Section 1</class>  
+      <children>
+        <element>
+        <class>Paragraph</class>  
+        <text>Paragraf 2</text>
+   </element>
+        <element>
+      <class>Paragraph</class>  
+      <text>dinkardsfdsdf</text>
+
+        </element>
+      </children>
+   </element>
+</book>
+
