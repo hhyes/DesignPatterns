@@ -18,6 +18,12 @@ public class OpenCommand implements Command{
 		DocumentManager dc=DocumentManager.getInstance();
 		dc.setBook(book);
 	}
+
+	@Override
+	public void unexecute() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }

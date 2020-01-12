@@ -61,5 +61,11 @@ public class Tabel implements Element, Observable{
 		this.notifyObservers();
 		
 	}
+
+	@Override
+	public Element copy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

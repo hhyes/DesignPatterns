@@ -6,6 +6,7 @@ public class Paragraf implements Element, Observable{
 	private String text;
 	private String oldText;
 	private ArrayList<Observer> observers=new ArrayList<Observer>();
+	private AlignStrategy align;
 
 	public Paragraf(String text) {
 		super();
@@ -15,7 +16,13 @@ public class Paragraf implements Element, Observable{
 	@Override
 	public void print()
 	{
-		System.out.println("Paragraf: " + this.text);
+		if(align!=null)
+		{
+			align.print(text);
+		}
+		else {
+			System.out.println("Paragraf: " + this.text);
+		}
 	}
 
 	@Override
@@ -60,5 +67,15 @@ public class Paragraf implements Element, Observable{
 		this.notifyObservers();
 		
 	}
+
+	@Override
+	public Element copy() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
+	public void setAlignStrategy(AlignStrategy align)
+	{
+		this.align=align;
+	}
 }
