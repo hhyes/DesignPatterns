@@ -12,4 +12,6 @@ public interface Visitor {
 	public void visit(Tabel tb);
 	
 	public void visit(Section tb);
+	
+	public void visit(ArtWorkText tb);
 }

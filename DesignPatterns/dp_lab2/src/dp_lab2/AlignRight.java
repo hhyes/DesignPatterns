@@ -6,7 +6,7 @@ public class AlignRight implements AlignStrategy{
 
 	@Override
 	public void print(String text) {
-		 System.out.printf("Paragraf: %s/n",StringUtils.right(text, 22));
+		System.out.println("####### "+text);
 		
 	}
 

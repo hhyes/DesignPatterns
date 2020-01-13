@@ -48,4 +48,10 @@ public class BookSave implements Visitor{
 		
 	}
 
+	@Override
+	public void visit(ArtWorkText tb) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

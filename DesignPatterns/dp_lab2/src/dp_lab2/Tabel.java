@@ -7,6 +7,7 @@ public class Tabel implements Element, Observable{
 	private String nume;
 	private String oldnume;
 	private ArrayList<Observer> observers=new ArrayList<Observer>();
+	private AlignStrategy align;
 
 	public Tabel(String nume) {
 		super();
@@ -16,9 +17,18 @@ public class Tabel implements Element, Observable{
 	@Override
 	public void print()
 	{
+		if(align!=null)
+		{
+			align.print(nume);
+		}
+		else {
 		System.out.println("Tabel: " + this.nume);
-	}
+		}	}
 
+	public void setAlignStrategy(AlignStrategy align)
+	{
+		this.align=align;
+	}
 	@Override
 	public void accept(Visitor vis) {
 		// TODO Auto-generated method stub
@@ -67,5 +77,7 @@ public class Tabel implements Element, Observable{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 	
 }

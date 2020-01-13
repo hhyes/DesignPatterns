@@ -51,4 +51,10 @@ public class BookStatistics implements Visitor{
 		System.out.println("No. of sections: "+this.sections);
 	}
 
+	@Override
+	public void visit(ArtWorkText tb) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

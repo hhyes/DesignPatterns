@@ -213,7 +213,7 @@ public class Carte {
 		cap1.setNewValue("CHAPTER 1.1");*/
 		
 		
-		Section cap1 = new Section("Capitolul 1");
+		/*Section cap1 = new Section("Capitolul 1");
 		cap1.addElm(new Paragraf("Moto capitol"));
 		cap1.addElm(new Paragraf("Another One"));
 		cap1.addElm(new Paragraf("Another Two"));
@@ -234,9 +234,28 @@ public class Carte {
 		DocumentManager.getInstance().getContent().print();
 		new UndoCommand().execute();
 		System.out.println("Book Content after second undo: ");
-		DocumentManager.getInstance().getContent().print();
+		DocumentManager.getInstance().getContent().print();*/
 		
 		
+		Section cap1 = new Section("Capitolul 1");
+		Tabel t1=new Tabel("Tabel 1");
+		Tabel t2=new Tabel("Tabel 2");
+		Tabel t3=new Tabel("Tabel 3");
+		t1.setAlignStrategy(new AlignCenter());
+		t2.setAlignStrategy(new AlignLeft());
+		t3.setAlignStrategy(new AlignRight());
+		cap1.addElm(t1);
+		cap1.addElm(t2);
+		cap1.addElm(t3);
+		
+		cap1.addElm(new ArtWorkText("HELLO IT WORKS"));
+		cap1.print();
+		
+		cap1.addElm(new Imagine("IMAGINE"));
+		cap1.addElm(new Paragraf("Paragraf"));
+		FinancialStatistics stats = new FinancialStatistics();
+		cap1.accept(stats);
+		stats.printStatistics();
 		
 		
 		
